@@ -5,26 +5,21 @@ function asigTextElemen(elemento, texto) {
 
 function encriptarTexto() {
   let palabraIngresada = document.getElementById("text-ingresado").value;
-  let condicion = /^[a-z\s]+$/; //expresion regular perimite minuscula y espacios
+  let condicion = /^[a-z\s]+$/; // Expresión regular permite minúsculas y espacios
 
-  if (palabraIngresada == "") {
-    Swal.fire({
-      title: "Campo Vacio",
-      text: "Ingrese una Palabra para Inciar",
-      icon: "error",
-      confirmButtonText: "Aceptar",
-    });
+  if (palabraIngresada === "") {
+    alert("Entrada vacia"); // Cambié showAlert por alert
     return;
   }
-  if (condicion.test(palabraIngresada) == false) {
-    Swal.fire({
-      title: "Error, verifique la palabra ingresada",
-      text: "Recuerde que no estan permitidas las mayusculas, acentos o caracteres especiales",
-      icon: "error",
-      confirmButtonText: "Aceptar",
-    });
+  if (!condicion.test(palabraIngresada)) {
+    alert("La entrada debe contener solo minúsculas y espacios.");
     return;
   }
+  if (!/[aeiou]/.test(palabraIngresada)) {
+    alert("La entrada debe contener al menos una vocal.");
+    return;
+  }
+
   let palabraEncriptada = palabraIngresada
     .replace(/e/g, "enter")
     .replace(/i/g, "imes")
@@ -33,31 +28,26 @@ function encriptarTexto() {
     .replace(/u/g, "ufat");
 
   document.getElementById("resultado").value = palabraEncriptada;
-  return;
+
+  // Ocultar el div panel-imagen y mostrar texto-resultado
+  document.querySelector(".panel-imagen").style.display = "none";
+  document.querySelector(".texto-resultado").style.display = "block";
 }
 
 function desencriptarTexto() {
   let palabraIngresada = document.getElementById("text-ingresado").value;
-  let condicion = /^[a-z\s]+$/; //expresion regular perimite minuscula y espacios
+  let condicion = /^[a-z\s]+$/; // Expresión regular permite minúsculas y espacios
 
-  if (palabraIngresada == "") {
-    Swal.fire({
-      title: "Campo Vacio",
-      text: "Ingrese una Palabra para Inciar",
-      icon: "error",
-      confirmButtonText: "Aceptar",
-    });
+  if (palabraIngresada === "") {
+    alert("campo vacio");
     return;
   }
-  
-  if (condicion.test(palabraIngresada) == false) {
-    Swal.fire({
-      title: "Error, verifique la palabra ingresada",
-      text: "Recuerde que no estan permitidas las mayusculas, acentos o caracteres especiales",
-      icon: "error",
-      confirmButtonText: "Aceptar",
-    });
+
+  if (!condicion.test(palabraIngresada)) {
+    alert("La entrada debe contener solo minúsculas y espacios.");
+    return;
   }
+
   let palabraDesencriptada = palabraIngresada
     .replace(/enter/g, "e")
     .replace(/imes/g, "i")
@@ -67,28 +57,28 @@ function desencriptarTexto() {
 
   document.getElementById("resultado").value = palabraDesencriptada;
 
-  return;
+  document.querySelector(".panel-imagen").style.display = "block";
+  document.querySelector(".texto-resultado").style.display = "none";
 }
+
 function copiarTexto() {
   let palabraCopiada = document.getElementById("resultado").value;
   navigator.clipboard
     .writeText(palabraCopiada)
     .then(() => {
-      Swal.fire({
-        title: "Copiado",
-        icon: "success",
-        confirmButtonText: "Aceptar",
-      });
+      alert("Texto copiado al portapapeles");
     })
     .catch((err) => {
       console.error("Error al copiar texto:", err);
     });
+
   limpiar();
 }
 
 function limpiar() {
   document.querySelector("#text-ingresado").value = "";
   document.querySelector("#resultado").value = "";
-}
 
-/*  document.getElementById("reiniciar").setAttribute("disabled", true); */
+  document.querySelector(".panel-imagen").style.display = "block";
+  document.querySelector(".texto-resultado").style.display = "none";
+}

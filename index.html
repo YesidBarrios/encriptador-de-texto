@@ -16,31 +16,66 @@
   </head>
   <body>
     <header>
-      <nav></nav>
+      <div class="header-info">
+        <a href="https://www.aluracursos.com/" target="_blank"
+          ><img class="logo-alura" src="asset/LogoAlura.png" alt="Logo Alura"
+        /></a>
+        <h1 class="footer-titulo">Encriptador de Texto</h1>
+      </div>
     </header>
     <main class="contenido">
       <div class="contenido-encriptador">
-        <input
-          type="text"
+        <textarea
+          name="texto-ingresado"
           id="text-ingresado"
-          placeholder="Ingrese Una Palabra"
-          required
-        />
+          placeholder="Ingrese una Palabra"
+        ></textarea>
 
         <p class="advertencia">
           <i class="fas fa-exclamation-circle"></i>No ingrese mayusculas,
           acentos o signos especiales
         </p>
-        <button onclick="encriptarTexto()" class="btn">Encriptar</button>
-        <button onclick="desencriptarTexto()" class="btn">Desencriptar</button>
+        <div class="btn-accion">
+          <button onclick="encriptarTexto()" class="btn">Encriptar</button>
+          <button onclick="desencriptarTexto()" class="btn">
+            Desencriptar
+          </button>
+        </div>
       </div>
+
+      <div class="panel-imagen">
+        <img
+          src="asset/Muñeco.png"
+          alt="avatar
+       "
+        />
+        <h2>Ningun Mensaje Encontrado</h2>
+        <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+      </div>
+
       <div class="texto-resultado">
         <textarea name="resultado" id="resultado" readonly></textarea>
-        <button onclick="copiarTexto()" class="copiar">Copiar</button>
+        <button onclick="copiarTexto()" class="btn">Copiar</button>
       </div>
     </main>
 
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <div class="footer-info">
+        <a
+          href="https://github.com/YesidBarrios"
+          target="_blank"
+          class="footer-links-social"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/yesidbarrios05/"
+          target="_blank"
+          class="footer-links-social"
+          ><i class="fa-brands fa-linkedin-in"></i
+        ></a>
+      </div>
+      <p class="footer-info-text">Realizado Para Alura Latam</p>
+    </footer>
     <script src="app.js"></script>
   </body>
 </html>
