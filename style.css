@@ -33,7 +33,7 @@ body {
 }
 
 #text-ingresado {
-
+  resize: none;
   height: 80%;
   width: 95%;
   margin: 2%;
@@ -56,16 +56,15 @@ body {
   display: none;
 }
 
+
 #resultado {
   display: flex;
   justify-content: space-between;
   resize: none;
   height: 70%;
   width: 95%;
-  margin: 2%; /* no cambia tamaño */
-  /*  pointer-events: none */
+  margin: 2%;
 }
-
 .panel-imagen {
   border: 2px solid #cbbf16;
   height: 100%;

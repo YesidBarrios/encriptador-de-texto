@@ -57,8 +57,8 @@ function desencriptarTexto() {
 
   document.getElementById("resultado").value = palabraDesencriptada;
 
-  document.querySelector(".panel-imagen").style.display = "block";
-  document.querySelector(".texto-resultado").style.display = "none";
+  document.querySelector(".panel-imagen").style.display = "none";
+  document.querySelector(".texto-resultado").style.display = "block";
 }
 
 function copiarTexto() {
