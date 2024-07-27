@@ -1,6 +1,17 @@
-function asigTextElemen(elemento, texto) {
+function asigTextElemen(elemento, texto, color) {
   let elementosHtml = document.querySelector(elemento);
   elementosHtml.innerHTML = texto;
+  elementosHtml.style.color = color;
+}
+
+function mostrarElemento(elemento) {
+  document.querySelector(elemento).style.visibility = "visible";
+  document.querySelector(elemento).style.position = "static";
+}
+
+function ocultarElemento(elemento) {
+  document.querySelector(elemento).style.visibility = "hidden";
+  document.querySelector(elemento).style.position = "absolute";
 }
 
 function encriptarTexto() {
@@ -8,15 +19,30 @@ function encriptarTexto() {
   let condicion = /^[a-z\s]+$/; // Expresión regular permite minúsculas y espacios
 
   if (palabraIngresada === "") {
-    alert("Entrada vacia"); // Cambié showAlert por alert
+    asigTextElemen(".panel-mensaje", "¡Atención!", "#d90429");
+    asigTextElemen(
+      ".panel-parrafo",
+      "verifique que su entrada no este vacia.",
+      "#d90429"
+    );
     return;
   }
   if (!condicion.test(palabraIngresada)) {
-    alert("La entrada debe contener solo minúsculas y espacios.");
+    asigTextElemen(".panel-mensaje", "¡Atención!", "#d90429");
+    asigTextElemen(
+      ".panel-parrafo",
+      "La entrada debe contener solo minúsculas y espacios.",
+      "#d90429"
+    );
     return;
   }
   if (!/[aeiou]/.test(palabraIngresada)) {
-    alert("La entrada debe contener al menos una vocal.");
+    asigTextElemen(".panel-mensaje", "¡Atención!", "#d90429");
+    asigTextElemen(
+      ".panel-parrafo",
+      "La entrada no es una palabra, debe contener al menos una vocal.",
+      "#d90429"
+    );
     return;
   }
 
@@ -30,6 +56,7 @@ function encriptarTexto() {
   document.getElementById("resultado").value = palabraEncriptada;
 
   // Ocultar el div panel-imagen y mostrar texto-resultado
+
   document.querySelector(".panel-imagen").style.display = "none";
   document.querySelector(".texto-resultado").style.display = "block";
 }
@@ -39,12 +66,22 @@ function desencriptarTexto() {
   let condicion = /^[a-z\s]+$/; // Expresión regular permite minúsculas y espacios
 
   if (palabraIngresada === "") {
-    alert("campo vacio");
+    asigTextElemen(".panel-mensaje", "¡Atención!", "#d90429");
+    asigTextElemen(
+      ".panel-parrafo",
+      "verifique que su entrada no este vacia.",
+      "#d90429"
+    );
     return;
   }
 
   if (!condicion.test(palabraIngresada)) {
-    alert("La entrada debe contener solo minúsculas y espacios.");
+    asigTextElemen(".panel-mensaje", "¡Atención!", "#d90429");
+    asigTextElemen(
+      ".panel-parrafo",
+      "La entrada debe contener solo minúsculas y espacios.",
+      "#d90429"
+    );
     return;
   }
 
@@ -66,7 +103,8 @@ function copiarTexto() {
   navigator.clipboard
     .writeText(palabraCopiada)
     .then(() => {
-      alert("Texto copiado al portapapeles");
+      asigTextElemen(".panel-mensaje", "¡Atención!", "#d90429");
+      asigTextElemen(".panel-parrafo", "Texto Copiado Con Exito", "#d90429");
     })
     .catch((err) => {
       console.error("Error al copiar texto:", err);
