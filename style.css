@@ -1,13 +1,13 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   background-color: black;
   color: white;
   height: 100vh;
-  box-sizing: border-box;
 }
 
 .header-info {
@@ -23,13 +23,15 @@ body {
   margin: 5%;
   display: flex;
   justify-content: space-between;
-  box-sizing: border-box;
 }
 .contenido-encriptador {
   border: 2px solid #da1414;
   border-radius: 10px;
   height: 100%;
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 2%;
 }
 
 #text-ingresado {
@@ -37,6 +39,11 @@ body {
   height: 80%;
   width: 95%;
   margin: 2%;
+}
+.advertencia {
+  margin: 2%;
+  display: flex;
+  gap: 10px;
 }
 
 .btn {
@@ -47,15 +54,20 @@ body {
   color: #fff;
 }
 
+.btn-accion {
+  display: flex;
+  justify-content: center;
+  gap: 1%;
+}
 .texto-resultado {
   border: 2px solid #cbbf16;
   height: 100%;
   width: 45%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   display: none;
 }
-
 
 #resultado {
   display: flex;

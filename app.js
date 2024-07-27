@@ -4,16 +4,6 @@ function asigTextElemen(elemento, texto, color) {
   elementosHtml.style.color = color;
 }
 
-function mostrarElemento(elemento) {
-  document.querySelector(elemento).style.visibility = "visible";
-  document.querySelector(elemento).style.position = "static";
-}
-
-function ocultarElemento(elemento) {
-  document.querySelector(elemento).style.visibility = "hidden";
-  document.querySelector(elemento).style.position = "absolute";
-}
-
 function encriptarTexto() {
   let palabraIngresada = document.getElementById("text-ingresado").value;
   let condicion = /^[a-z\s]+$/; // Expresión regular permite minúsculas y espacios
@@ -58,7 +48,7 @@ function encriptarTexto() {
   // Ocultar el div panel-imagen y mostrar texto-resultado
 
   document.querySelector(".panel-imagen").style.display = "none";
-  document.querySelector(".texto-resultado").style.display = "block";
+  document.querySelector(".texto-resultado").style.display = "flex";
 }
 
 function desencriptarTexto() {
@@ -95,7 +85,7 @@ function desencriptarTexto() {
   document.getElementById("resultado").value = palabraDesencriptada;
 
   document.querySelector(".panel-imagen").style.display = "none";
-  document.querySelector(".texto-resultado").style.display = "block";
+  document.querySelector(".texto-resultado").style.display = "flex";
 }
 
 function copiarTexto() {
@@ -117,6 +107,6 @@ function limpiar() {
   document.querySelector("#text-ingresado").value = "";
   document.querySelector("#resultado").value = "";
 
-  document.querySelector(".panel-imagen").style.display = "block";
+  document.querySelector(".panel-imagen").style.display = "flex";
   document.querySelector(".texto-resultado").style.display = "none";
 }
