@@ -5,22 +5,34 @@
 }
 
 body {
+  width: 100vw;
+  height: 100vh;
   background-color: black;
   color: white;
-  height: 100vh;
 }
-
+header {
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .header-info {
+  width: 50%;
   padding: 15px;
   display: flex;
-  gap: 30%;
+  justify-content: space-evenly;
 }
-
+.link__logoAlura,
+.footer-titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .contenido {
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 85%;
+  padding: 5%;
   border: 2px solid #fff;
-  margin: 5%;
   display: flex;
   justify-content: space-between;
 }
@@ -60,12 +72,12 @@ body {
   gap: 1%;
 }
 .texto-resultado {
-  border: 2px solid #cbbf16;
+  border: 2px solid rgb(150, 126, 200);
   height: 100%;
   width: 45%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
   display: none;
 }
 
@@ -78,9 +90,9 @@ body {
   margin: 2%;
 }
 .panel-imagen {
-  border: 2px solid #cbbf16;
-  height: 100%;
   width: 45%;
+  height: 100%;
+  border: 2px solid #cbbf16;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -93,7 +105,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 20px;
-  height: 50px;
+  height: 5%;
   background-color: #3fccff;
 }
 .footer-info {
