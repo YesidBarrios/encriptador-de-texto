@@ -1,40 +1,50 @@
+// Función para asignar texto y color a un elemento HTML
 function asigTextElemen(elemento, texto, color) {
   let elementosHtml = document.querySelector(elemento);
   elementosHtml.innerHTML = texto;
   elementosHtml.style.color = color;
 }
 
-function encriptarTexto() {
-  let palabraIngresada = document.getElementById("text-ingresado").value;
-  let condicion = /^[a-z\s]+$/; // Expresión regular permite minúsculas y espacios
+// Función para mostrar mensajes en el panel de mensajes
+function mostrarMensaje(mensaje, detalle, color) {
+  asigTextElemen(".panel-mensaje", mensaje, color);
+  asigTextElemen(".panel-parrafo", detalle, color);
+}
 
-  if (palabraIngresada === "") {
-    asigTextElemen(".panel-mensaje", "¡Atención!", "#d90429");
-    asigTextElemen(
-      ".panel-parrafo",
-      "verifique que su entrada no este vacia.",
+// Función para validar la entrada del usuario
+function validarEntrada(texto) {
+  if (texto === "") {
+    mostrarMensaje(
+      "¡Atención!",
+      "Verifique que su entrada no esté vacía.",
       "#d90429"
     );
-    return;
+    return false;
   }
-  if (!condicion.test(palabraIngresada)) {
-    asigTextElemen(".panel-mensaje", "¡Atención!", "#d90429");
-    asigTextElemen(
-      ".panel-parrafo",
+  if (!/^[a-z\s]+$/.test(texto)) {
+    mostrarMensaje(
+      "¡Atención!",
       "La entrada debe contener solo minúsculas y espacios.",
       "#d90429"
     );
-    return;
+    return false;
   }
-  if (!/[aeiou]/.test(palabraIngresada)) {
-    asigTextElemen(".panel-mensaje", "¡Atención!", "#d90429");
-    asigTextElemen(
-      ".panel-parrafo",
-      "La entrada no es una palabra, debe contener al menos una vocal.",
+  if (!/[aeiou]/.test(texto)) {
+    mostrarMensaje(
+      "¡Atención!",
+      "la palabra debe contener al menos una vocal.",
       "#d90429"
     );
-    return;
+    return false;
   }
+  return true;
+}
+
+// Función para encriptar el texto ingresado
+function encriptarTexto() {
+  let palabraIngresada = document.getElementById("text-ingresado").value;
+
+  if (!validarEntrada(palabraIngresada)) return;
 
   let palabraEncriptada = palabraIngresada
     .replace(/e/g, "enter")
@@ -45,35 +55,14 @@ function encriptarTexto() {
 
   document.getElementById("resultado").value = palabraEncriptada;
 
-  // Ocultar el div panel-imagen y mostrar texto-resultado
-
-  document.querySelector(".panel-imagen").style.display = "none";
-  document.querySelector(".texto-resultado").style.display = "flex";
+  mostrarResultado();
 }
 
+// Función para desencriptar el texto ingresado
 function desencriptarTexto() {
   let palabraIngresada = document.getElementById("text-ingresado").value;
-  let condicion = /^[a-z\s]+$/; // Expresión regular permite minúsculas y espacios
 
-  if (palabraIngresada === "") {
-    asigTextElemen(".panel-mensaje", "¡Atención!", "#d90429");
-    asigTextElemen(
-      ".panel-parrafo",
-      "verifique que su entrada no este vacia.",
-      "#d90429"
-    );
-    return;
-  }
-
-  if (!condicion.test(palabraIngresada)) {
-    asigTextElemen(".panel-mensaje", "¡Atención!", "#d90429");
-    asigTextElemen(
-      ".panel-parrafo",
-      "La entrada debe contener solo minúsculas y espacios.",
-      "#d90429"
-    );
-    return;
-  }
+  if (!validarEntrada(palabraIngresada)) return;
 
   let palabraDesencriptada = palabraIngresada
     .replace(/enter/g, "e")
@@ -84,17 +73,16 @@ function desencriptarTexto() {
 
   document.getElementById("resultado").value = palabraDesencriptada;
 
-  document.querySelector(".panel-imagen").style.display = "none";
-  document.querySelector(".texto-resultado").style.display = "flex";
+  mostrarResultado();
 }
 
+// Función para copiar el texto encriptado o desencriptado
 function copiarTexto() {
   let palabraCopiada = document.getElementById("resultado").value;
   navigator.clipboard
     .writeText(palabraCopiada)
     .then(() => {
-      asigTextElemen(".panel-mensaje", "¡Atención!", "#d90429");
-      asigTextElemen(".panel-parrafo", "Texto Copiado Con Exito", "#d90429");
+      mostrarMensaje("¡Atención!", "Texto Copiado Con Éxito", "#d90429");
     })
     .catch((err) => {
       console.error("Error al copiar texto:", err);
@@ -103,10 +91,21 @@ function copiarTexto() {
   limpiar();
 }
 
+// Función para limpiar los campos de texto y restablecer la interfaz
 function limpiar() {
   document.querySelector("#text-ingresado").value = "";
   document.querySelector("#resultado").value = "";
 
+  ocultarResultado();
+}
+
+// Funciones para mostrar y ocultar el resultado
+function mostrarResultado() {
+  document.querySelector(".panel-imagen").style.display = "none";
+  document.querySelector(".texto-resultado").style.display = "flex";
+}
+
+function ocultarResultado() {
   document.querySelector(".panel-imagen").style.display = "flex";
   document.querySelector(".texto-resultado").style.display = "none";
 }

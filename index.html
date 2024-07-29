@@ -4,14 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="asset/icon.png" />
-
+    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Encriptador de Texto</title>
   </head>
   <body>
@@ -19,22 +20,24 @@
       <div class="header-info">
         <a
           class="link__logoAlura"
+          title="Alura"
           href="https://www.aluracursos.com/"
           target="_blank"
-          ><img class="logo-alura" src="asset/LogoAlura.png" alt="Logo Alura"
-        /></a>
+        >
+          <img class="logo-alura" src="asset/LogoAlura.png" alt="Logo Alura" />
+        </a>
         <h1 class="footer-titulo">Encriptador de Texto</h1>
       </div>
     </header>
     <main class="contenido">
       <div class="contenido-encriptador">
         <textarea
-          name="texto-ingresado"
-          id="text-ingresado"
-          placeholder="Ingrese una Palabra"
-        ></textarea>
+        id="text-ingresado"
+        placeholder="Ingresa el texto a encriptar o desencriptar"
+        title="Texto que desea encriptar o desencriptar"
+      ></textarea>
         <p class="advertencia">
-          <i class="fas fa-exclamation-circle"></i>No ingrese mayusculas,
+          <i class="fas fa-exclamation-circle"></i>No ingrese mayúsculas,
           acentos o signos especiales
         </p>
         <div class="btn-accion">
@@ -46,15 +49,19 @@
       </div>
 
       <div class="panel-imagen">
-        <img src="asset/Muñeco.png" alt="avatar" />
-        <h2 class="panel-mensaje">Ningun Mensaje Encontrado</h2>
-        <p class="panel-parrafo">
-          Ingresa el texto que desees encriptar o desencriptar.
-        </p>
+        <img class="avatar" src="asset/Muñeco.png" alt="avatar" />
+        <h2 class="panel-mensaje">Ningún Mensaje Encontrado</h2>
+        <p class="panel-parrafo"></p>
       </div>
 
       <div class="texto-resultado">
-        <textarea name="resultado" id="resultado" readonly></textarea>
+        <input
+          type="text"
+          id="resultado"
+          readonly
+          placeholder="El resultado aparecerá aquí"
+          title="Texto encriptado"
+        />
         <button onclick="copiarTexto()" class="btn">Copiar</button>
       </div>
     </main>
@@ -65,6 +72,7 @@
           href="https://github.com/YesidBarrios"
           target="_blank"
           class="footer-links-social"
+          title="github"
         >
           <i class="fab fa-github"></i>
         </a>
@@ -72,6 +80,7 @@
           href="https://www.linkedin.com/in/yesidbarrios05/"
           target="_blank"
           class="footer-links-social"
+          title="linkedin"
         >
           <i class="fa-brands fa-linkedin-in"></i>
         </a>
