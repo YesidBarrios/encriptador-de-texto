@@ -37,7 +37,7 @@ header {
   height: 80%;
   padding: 2%;
   background-color: #32064c;
-  border: 2px solid #fff;
+ /*  border: 2px solid #fff; */
   border-radius: 5px;
   display: flex;
   flex-direction: row;
@@ -57,7 +57,7 @@ header {
   justify-content: center;
   flex-direction: column;
   gap: 2%;
-  backdrop-filter: blur(10px); /* Efecto de desenfoque */
+  backdrop-filter: blur(10px); 
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
   border: none;
 }
@@ -137,7 +137,7 @@ header {
   font-family: "poppins", Arial, Helvetica, sans-serif;
 }
 .panel-imagen {
-  background-color: #28053d; /* Color de fondo */
+  background-color: #28053d; 
   border-radius: 10px;
   height: 100%;
   width: 35%;
@@ -148,7 +148,7 @@ header {
   gap: 2%;
   padding-bottom: 1%;
   font-size: 1rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6); /* Sombra */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
 }
 
 .avatar {

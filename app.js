@@ -9,7 +9,7 @@ function asigTextElemen(elemento, texto, color, fondo) {
 // Función para mostrar mensajes en el panel de mensajes
 // Función para mostrar mensajefondoel panel de mensajes
 function mostrarMensaje(mensaje, detalle, color, fondo) {
-  asigTextElemen(".panel-mensaje", mensaje, color ,fondo);
+  asigTextElemen(".panel-mensaje", mensaje, color, fondo);
   asigTextElemen(".panel-parrafo", detalle, color, fondo);
 }
 
@@ -19,7 +19,8 @@ function validarEntrada(texto) {
     mostrarMensaje(
       "¡Atención!",
       "Verifique que su entrada no esté vacía.",
-      "#990000", "#fff"
+      "#990000",
+      "#ad9bb7"
     );
     return false;
   }
@@ -27,7 +28,8 @@ function validarEntrada(texto) {
     mostrarMensaje(
       "¡Atención!",
       "La entrada debe contener solo minúsculas y espacios.",
-      "#990000", "#fff"
+      "#990000",
+      "#ad9bb7"
     );
     return false;
   }
@@ -35,7 +37,8 @@ function validarEntrada(texto) {
     mostrarMensaje(
       "¡Atención!",
       "la palabra debe contener al menos una vocal.",
-      "#990000", "#fff"
+      "#990000",
+      "#ad9bb7"
     );
     return false;
   }
