@@ -91,12 +91,13 @@ header {
   height: 2.25rem;
   margin-bottom: 0.5rem;
   border-radius: 15px;
-  background-color: #3fccff;
-  color: #fff;
+  background-color: #ffffff;
+  color: #32064c;
 }
 .btn:hover {
   transform: scale(1.2);
-  background-color: #8214d6;
+  background-color: #5b3870;
+  color: #fff;
 }
 
 .btn-accion {
@@ -136,8 +137,7 @@ header {
   font-family: "poppins", Arial, Helvetica, sans-serif;
 }
 .panel-imagen {
-  border: 2px solid;
-  background-color: #28053d;
+  background-color: #28053d; /* Color de fondo */
   border-radius: 10px;
   height: 100%;
   width: 35%;
@@ -148,7 +148,9 @@ header {
   gap: 2%;
   padding-bottom: 1%;
   font-size: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6); /* Sombra */
 }
+
 .avatar {
   width: 90%;
   height: 80%;
@@ -181,5 +183,5 @@ header {
 
 .footer-info i:hover {
   transform: scale(1.2); /* Agranda el icono */
-  background-color: #ff7f50; /* Cambia el color de fondo */
+  background-color: #14021e; /* Cambia el color de fondo */
 }
