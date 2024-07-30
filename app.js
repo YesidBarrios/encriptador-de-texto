@@ -17,7 +17,7 @@ function validarEntrada(texto) {
     mostrarMensaje(
       "¡Atención!",
       "Verifique que su entrada no esté vacía.",
-      "#d90429"
+      "#FF0000"
     );
     return false;
   }
@@ -25,7 +25,7 @@ function validarEntrada(texto) {
     mostrarMensaje(
       "¡Atención!",
       "La entrada debe contener solo minúsculas y espacios.",
-      "#d90429"
+      "#FF0000"
     );
     return false;
   }
@@ -33,7 +33,7 @@ function validarEntrada(texto) {
     mostrarMensaje(
       "¡Atención!",
       "la palabra debe contener al menos una vocal.",
-      "#d90429"
+      "#FF0000"
     );
     return false;
   }
