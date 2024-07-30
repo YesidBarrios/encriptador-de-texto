@@ -1,14 +1,16 @@
 // Función para asignar texto y color a un elemento HTML
-function asigTextElemen(elemento, texto, color) {
+function asigTextElemen(elemento, texto, color, fondo) {
   let elementosHtml = document.querySelector(elemento);
   elementosHtml.innerHTML = texto;
   elementosHtml.style.color = color;
+  elementosHtml.style.backgroundColor = fondo;
 }
 
 // Función para mostrar mensajes en el panel de mensajes
-function mostrarMensaje(mensaje, detalle, color) {
-  asigTextElemen(".panel-mensaje", mensaje, color);
-  asigTextElemen(".panel-parrafo", detalle, color);
+// Función para mostrar mensajefondoel panel de mensajes
+function mostrarMensaje(mensaje, detalle, color, fondo) {
+  asigTextElemen(".panel-mensaje", mensaje, color ,fondo);
+  asigTextElemen(".panel-parrafo", detalle, color, fondo);
 }
 
 // Función para validar la entrada del usuario
@@ -17,7 +19,7 @@ function validarEntrada(texto) {
     mostrarMensaje(
       "¡Atención!",
       "Verifique que su entrada no esté vacía.",
-      "#990000"
+      "#990000", "#fff"
     );
     return false;
   }
@@ -25,7 +27,7 @@ function validarEntrada(texto) {
     mostrarMensaje(
       "¡Atención!",
       "La entrada debe contener solo minúsculas y espacios.",
-      "#990000"
+      "#990000", "#fff"
     );
     return false;
   }
@@ -33,7 +35,7 @@ function validarEntrada(texto) {
     mostrarMensaje(
       "¡Atención!",
       "la palabra debe contener al menos una vocal.",
-      "#990000"
+      "#990000", "#fff"
     );
     return false;
   }
