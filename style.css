@@ -37,17 +37,13 @@ header {
   height: 80%;
   padding: 2%;
   background-color: #32064c;
- /*  border: 2px solid #fff; */
+  /*  border: 2px solid #fff; */
   border-radius: 5px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-#text-ingresado::placeholder {
-  color: #fff;
-  opacity: 1;
-}
 .contenido-encriptador {
   background-color: rgba(40, 5, 61, 0.8);
   border-radius: 10px;
@@ -57,7 +53,7 @@ header {
   justify-content: center;
   flex-direction: column;
   gap: 2%;
-  backdrop-filter: blur(10px); 
+  backdrop-filter: blur(10px);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
   border: none;
 }
@@ -67,14 +63,21 @@ header {
   height: 80%;
   width: 95%;
   margin: 2.5%;
-  padding: 20% 20%;
-  overflow: hidden;
   outline: none;
+  padding-top: 20%;
   border-radius: 5px;
   color: #fff;
   background-color: #ad9bb7;
-  backdrop-filter: blur(0.2);
-  font-family: "poppins", Arial, Helvetica, sans-serif;
+  backdrop-filter: blur(0.2px);
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  text-align: center;
+  overflow: hidden;
+}
+
+#text-ingresado::placeholder {
+  color: #fff;
+  opacity: 1;
+  text-align: center;
 }
 
 .advertencia {
@@ -125,19 +128,26 @@ header {
   resize: none;
   height: 80%;
   width: 95%;
-  margin: 2%;
-  padding: 20% 40%;
-  overflow: hidden;
-  border: none;
+  margin: 2.5%;
   outline: none;
-  border-radius: 10px;
+  padding-top: 35%;
+  border-radius: 5px;
   color: #fff;
   background-color: #ad9bb7;
-  backdrop-filter: blur(0.2);
-  font-family: "poppins", Arial, Helvetica, sans-serif;
+  backdrop-filter: blur(0.2px);
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  text-align: center;
+  overflow: hidden;
 }
+
+#resultado::placeholder {
+  color: #fff;
+  opacity: 1;
+  text-align: center;
+}
+
 .panel-imagen {
-  background-color: #28053d; 
+  background-color: #28053d;
   border-radius: 10px;
   height: 100%;
   width: 35%;

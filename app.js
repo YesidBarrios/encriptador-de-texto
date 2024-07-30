@@ -114,3 +114,15 @@ function ocultarResultado() {
   document.querySelector(".panel-imagen").style.display = "flex";
   document.querySelector(".texto-resultado").style.display = "none";
 }
+
+document
+  .getElementById("text-ingresado")
+  .addEventListener("focus", function () {
+    this.placeholder = ""; // Oculta el placeholder al enfocar
+  });
+
+document.getElementById("text-ingresado").addEventListener("blur", function () {
+  if (this.value === "") {
+    this.placeholder = "Ingresa el texto a encriptar o desencriptar"; // Restaura el placeholder si está vacío
+  }
+});
