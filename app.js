@@ -44,9 +44,15 @@ function validarEntrada(texto) {
   }
   return true;
 }
+// Función para resetear el estado de la interfaz
+function resetearInterfaz() {
+  ocultarResultado();
+  mostrarMensaje("", "", "", ""); // Limpia los mensajes
+}
 
 // Función para encriptar el texto ingresado
 function encriptarTexto() {
+  resetearInterfaz();
   let palabraIngresada = document.getElementById("text-ingresado").value;
 
   if (!validarEntrada(palabraIngresada)) return;
@@ -65,6 +71,7 @@ function encriptarTexto() {
 
 // Función para desencriptar el texto ingresado
 function desencriptarTexto() {
+  resetearInterfaz();
   let palabraIngresada = document.getElementById("text-ingresado").value;
 
   if (!validarEntrada(palabraIngresada)) return;
@@ -87,7 +94,12 @@ function copiarTexto() {
   navigator.clipboard
     .writeText(palabraCopiada)
     .then(() => {
-      mostrarMensaje("¡Atención!", "Texto Copiado Con Éxito", "#d90429");
+      mostrarMensaje(
+        "¡Atención!",
+        "Texto Copiado Con Éxito",
+        "#990000",
+        "#ad9bb7"
+      );
     })
     .catch((err) => {
       console.error("Error al copiar texto:", err);
@@ -118,11 +130,11 @@ function ocultarResultado() {
 document
   .getElementById("text-ingresado")
   .addEventListener("focus", function () {
-    this.placeholder = ""; // Oculta el placeholder al enfocar
+    this.placeholder = ""; // Oculta el placeholder al darle click, innecesario pero me gusta
   });
 
 document.getElementById("text-ingresado").addEventListener("blur", function () {
   if (this.value === "") {
-    this.placeholder = "Ingresa el texto a encriptar o desencriptar"; // Restaura el placeholder si está vacío
+    this.placeholder = "Ingresa el texto a encriptar o desencriptar"; // Restaura el placeholder si está vacío, vuelve el mensaje
   }
 });
