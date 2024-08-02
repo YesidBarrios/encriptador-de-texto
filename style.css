@@ -2,13 +2,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 html,
 body {
   width: 100vw;
   height: 100dvh;
   color: white;
-  font-size: 16px;
+  font-size: 14px;
   font-family: "poppins", Arial, Helvetica, sans-serif;
 }
 header {
@@ -83,15 +84,19 @@ header {
 .btn {
   border: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
-  width: 6rem;
-  height: 2.25rem;
-  margin-bottom: 0.5rem;
+  width: 7rem;
+  height: 2.5rem;
+  padding: 10px;
+  margin-bottom: 10px;
   border-radius: 15px;
   background-color: #ffffff;
   color: #32064c;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
+
 .btn:hover {
-  transform: scale(1.2);
+  transform: scale(1.05);
   background-color: #5b3870;
   color: #fff;
 }
@@ -99,8 +104,9 @@ header {
 .btn-accion {
   display: flex;
   justify-content: center;
-  gap: 5%;
+  gap: 10px;
 }
+
 .texto-resultado {
   background-color: rgb(81, 55, 97, 0.6);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
@@ -170,7 +176,6 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
   height: 10%;
   font-size: 1.5rem;
   background-color: rgb(81, 55, 97, 1);
@@ -179,7 +184,7 @@ header {
   width: 10%;
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 15px;
 }
 .footer-info i {
   width: 40px;
@@ -188,6 +193,7 @@ header {
   text-align: center;
   background-color: #fff;
   border-radius: 10px;
+  transition: all 0.3s ease;
 }
 
 .footer-info i:hover {
@@ -263,6 +269,8 @@ header {
   }
 
   .header-info {
+
+      font-size: 0.6rem;
     flex-direction: column;
     align-items: center;
   }

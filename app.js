@@ -27,7 +27,7 @@ function validarEntrada(texto) {
   if (!/^[a-z\s]+$/.test(texto)) {
     mostrarMensaje(
       "¡Atención!",
-      "La entrada debe contener solo minúsculas y espacios.",
+      "El texto debe contener solo minúsculas y espacios.",
       "#990000",
       "#ad9bb7"
     );
@@ -36,18 +36,13 @@ function validarEntrada(texto) {
   if (!/[aeiou]/.test(texto)) {
     mostrarMensaje(
       "¡Atención!",
-      "la palabra debe contener al menos una vocal.",
+      "La texto debe contener al menos una vocal.",
       "#990000",
       "#ad9bb7"
     );
     return false;
   }
   return true;
-}
-// Función para resetear el estado de la interfaz
-function resetearInterfaz() {
-  ocultarResultado();
-  mostrarMensaje("", "", "", ""); // Limpia los mensajes
 }
 
 // Función para encriptar el texto ingresado
@@ -75,6 +70,15 @@ function desencriptarTexto() {
   let palabraIngresada = document.getElementById("text-ingresado").value;
 
   if (!validarEntrada(palabraIngresada)) return;
+  if (!/(enter|imes|ai|ober|ufat)/.test(palabraIngresada)) {
+    mostrarMensaje(
+      "¡Atención!",
+      "Esta palabra no necesita ser desencriptada",
+      "#990000",
+      "#ad9bb7"
+    );
+    return;
+  }
 
   let palabraDesencriptada = palabraIngresada
     .replace(/enter/g, "e")
@@ -107,7 +111,11 @@ function copiarTexto() {
 
   limpiar();
 }
-
+// Función para resetear el estado de la interfaz
+function resetearInterfaz() {
+  ocultarResultado();
+  mostrarMensaje("", "", "", ""); // Limpia los mensajes
+}
 // Función para limpiar los campos de texto y restablecer la interfaz
 function limpiar() {
   document.querySelector("#text-ingresado").value = "";
