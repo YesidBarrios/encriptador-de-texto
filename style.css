@@ -1,9 +1,11 @@
+/* Reset CSS */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Body Styles */
 body {
   width: 100vw;
   height: 100dvh;
@@ -11,6 +13,8 @@ body {
   font-size: 14px;
   font-family: "Roboto Mono", Arial, Helvetica, sans-serif;
 }
+
+/* Header Styles */
 header {
   height: 10vh;
   width: 100vw;
@@ -19,16 +23,20 @@ header {
   align-items: center;
   background-color: rgb(81, 55, 97, 1);
 }
+
 .header-info {
   display: flex;
   justify-content: space-around;
 }
+
 .link__logoAlura,
 .footer-titulo {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+/* Main Content Styles */
 .contenido {
   width: 100vw;
   height: 80vh;
@@ -53,6 +61,7 @@ header {
   font-size: 1.2rem;
 }
 
+/* Textarea Styles */
 #text-ingresado {
   resize: none;
   height: 80%;
@@ -67,11 +76,10 @@ header {
   align-content: center;
   overflow: hidden;
   font-size: 1.5rem;
-
 }
 
 #text-ingresado::placeholder {
-  color: #6b0aa8;
+  color: #5b1e81;
   opacity: 1;
   font-size: 1.25rem;
 }
@@ -83,6 +91,7 @@ header {
   align-items: baseline;
 }
 
+/* Button Styles */
 .btn {
   border: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
@@ -98,15 +107,15 @@ header {
 }
 
 .btn:hover {
-  transform: scale(1.05);
-  background-color: #5b3870;
-  color: #fff;
+  transform: scale(1.125);
+  background-color: #14021e;
+  color:#fbf3ff;
 }
 
 .btn-accion {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 20px;
 }
 
 .texto-resultado {
@@ -139,8 +148,6 @@ header {
   font-size: 1.5rem;
 }
 
-
-
 .panel-imagen {
   background-color: hsla(277, 28%, 30%, 0.6);
   border-radius: 30px;
@@ -161,15 +168,16 @@ header {
   height: 60%;
   margin: 2%;
 }
+
 .panel-parrafo,
 .panel-mensaje {
   margin: 2%;
   border-radius: 10px;
   padding: 2px;
   align-content: center;
-
 }
 
+/* Footer Styles */
 .footer {
   height: 10%;
   width: 100%;
@@ -180,12 +188,14 @@ header {
   font-size: 1.5rem;
   background-color: rgb(81, 55, 97, 1);
 }
+
 .footer-info {
   width: 10%;
   display: flex;
   justify-content: center;
   gap: 15px;
 }
+
 .footer-info i {
   width: 40px;
   height: 40px;
@@ -201,12 +211,14 @@ header {
   background-color: #14021e;
 }
 
+/* Responsive Styles */
 @media (max-width: 600px) {
   html,
   body {
     width: 100vw;
     height: 100vh;
   }
+
   header {
     height: 5vh;
     width: 100vw;
@@ -214,25 +226,30 @@ header {
     justify-content: left;
     font-size: 0.5rem;
   }
+
   .logo-alura {
     width: 70%;
     height: 70%;
   }
+
   .contenido {
     width: 100vw;
-    height: 90vh; /* Cambiado a 80vh para que no se superponga con el footer */
+    height: 90vh; /* Ajustado para que no se superponga con el footer */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
   }
+
   .contenido-encriptador {
     height: 40%;
-    max-width: 100%; /* Cambiado a 100% para que ocupe todo el ancho disponible */
+    max-width: 100%; /* Ajustado para que ocupe todo el ancho disponible */
   }
+
   .panel-imagen {
     height: 40%;
-    max-width: 100%; /* Cambiado a 100% para que ocupe todo el ancho disponible */
+    max-width: 100%; /* Ajustado para que ocupe todo el ancho disponible */
   }
+
   .footer {
     height: 5vh;
     width: 100vw;
@@ -240,6 +257,7 @@ header {
     justify-content: center;
     font-size: 0.5rem;
   }
+
   .footer-info i {
     width: 30px;
     height: 30px;
