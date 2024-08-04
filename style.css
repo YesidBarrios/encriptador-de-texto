@@ -2,9 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
-html,
+
 body {
   width: 100vw;
   height: 100dvh;
@@ -21,7 +20,7 @@ header {
   background-color: rgb(81, 55, 97, 1);
 }
 .header-info {
-  width: 50%;
+ 
   display: flex;
   justify-content: space-around;
 }
@@ -37,6 +36,7 @@ header {
   padding: 2%;
   background-color: #32064c;
   display: flex;
+  justify-content: space-around;
 }
 
 .contenido-encriptador {
@@ -50,7 +50,7 @@ header {
   gap: 2%;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
   border: none;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
 }
 
 #text-ingresado {
@@ -59,19 +59,19 @@ header {
   max-width: 95%;
   margin: 2.5%;
   outline: none;
-  padding-top: 20%;
   border-radius: 20px;
   color: #fff;
   background-color: #ad9bb7;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   text-align: center;
+  align-content: center;
   overflow: hidden;
 }
 
 #text-ingresado::placeholder {
   color: #fff;
   opacity: 1;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .advertencia {
@@ -127,13 +127,12 @@ header {
   max-width: 85%;
   margin: 4%;
   outline: none;
-  padding-top: 40%;
   border-radius: 20px;
   color: #fff;
   background-color: #ad9bb7;
-  backdrop-filter: blur(0.2px);
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   text-align: center;
+  align-content: center;
   overflow: hidden;
 }
 
@@ -160,11 +159,12 @@ header {
 }
 
 .avatar {
-  width: 50%;
+  width: 60%;
   height: 70%;
   margin: 2%;
 }
-.panel-parrafo, .panel-mensaje {
+.panel-parrafo,
+.panel-mensaje {
   margin: 2%;
   border-radius: 10px;
   padding: 2px;
@@ -201,105 +201,47 @@ header {
   background-color: #14021e;
 }
 
-/* Media queries para pantallas de escritorio (ancho mayor a 1024px) */
-@media (min-width: 1024px) {
+@media (max-width: 600px) {
+  html, body {
+    width: 100vw;
+    height: 100vh;
+  }
+  header {
+    height: 5vh;
+    width: 100vw;
+    display: flex;
+    justify-content: left;
+    font-size: 0.5rem;
+  }
+  .logo-alura{
+    width: 70%;
+    height: 70%;
+  }
   .contenido {
-    flex-direction: row;
+    width: 100vw;
+    height: 90vh; /* Cambiado a 80vh para que no se superponga con el footer */
+    display: flex;
+    flex-direction: column;
     justify-content: space-around;
-  }
 
-  .contenido-encriptador,
-  .texto-resultado {
-    width: 45%;
   }
-
+  .contenido-encriptador {
+    height: 40%;
+    max-width: 100%; /* Cambiado a 100% para que ocupe todo el ancho disponible */
+  }
   .panel-imagen {
-    width: 30%;
+    height: 40%;
+    max-width: 100%; /* Cambiado a 100% para que ocupe todo el ancho disponible */
   }
-
-  .footer-info {
-    width: 20%;
+  .footer {
+    height: 5vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    font-size: 0.5rem;
   }
-}
-
-/* Media queries para tablets (ancho entre 768px y 1024px) */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .contenido {
-    flex-direction: column;
-    align-items: center;
+  .footer-info i{
+    width: 30px;
+    height: 30px;
   }
-
-  .contenido-encriptador,
-  .texto-resultado,
-  .panel-imagen {
-    width: 80%;
-    margin-bottom: 20px;
-  }
-
-  .header-info {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .footer-info {
-    width: 30%;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
-
-/* Media queries para móviles (ancho menor a 768px) */
-@media (max-width: 767px) {
-  .contenido {
-    flex-direction: column;
-    align-items: center;
-    padding: 1%;
-  }
-
-  .contenido-encriptador,
-  .texto-resultado,
-  .panel-imagen {
-    width: 90%;
-    margin-bottom: 20px;
-  }
-
-  .btn {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  .header-info {
-
-      font-size: 0.6rem;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .footer-info {
-    width: 40%;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
-
-/* Estilos iniciales para contenedores padres */
-.contenido-encriptador,
-.panel-imagen,
-.texto-resultado {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Efectos en hover */
-.contenido-encriptador:hover,
-.panel-imagen:hover,
-.texto-resultado:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  /* No aplicar cambios en la opacidad */
-}
-
-/* Cambiar cursor para elementos interactivos */
-.btn {
-  cursor: pointer;
 }
