@@ -165,7 +165,6 @@ header {
 
 .avatar {
   width: 60%;
-  height: 60%;
   margin: 2%;
 }
 
@@ -223,7 +222,7 @@ header {
     display: flex;
     flex-direction: column;
     padding: 10px;
-    justify-content: space-around;
+    justify-content: center;
   }
 
   .contenido-encriptador {
@@ -235,6 +234,9 @@ header {
   #text-ingresado {
     font-size: 1rem;
     padding: 5px;
+  }
+  #text-ingresado::placeholder {
+    font-size: 1rem;
   }
 
   .texto-resultado {
@@ -255,10 +257,12 @@ header {
     font-size: 0.8rem;
   }
 
+  .avatar {
+    padding: 5px;
+  }
   .btn {
     font-size: 1rem;
   }
-
 
   .footer {
     position: relative;
