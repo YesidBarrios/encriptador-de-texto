@@ -441,8 +441,8 @@ header {
   }
 }
 
-/* Pantallas mayores a 1024px */
-@media (min-width: 1024px) {
+/* Pantallas menores a 1200px */
+@media (max-width: 1200px) {
   .contenido-encriptador,
   .texto-resultado,
   .panel-imagen {
