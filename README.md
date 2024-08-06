@@ -2,14 +2,22 @@
 
 **Descripción:**
 
-Este proyecto consiste en un encriptador de texto simple desarrollado utilizando **HTML**, **CSS** y **JavaScript**. El objetivo del desafío es poner en práctica los conocimientos adquiridos en el curso "Principiante en programación" de Oracle+Alura LATAM.
+Este proyecto es un encriptador de texto simple desarrollado utilizando **HTML**, **CSS** y **JavaScript**. El objetivo del desafío es poner en práctica los conocimientos adquiridos en el curso "Principiante en programación" de Oracle+Alura LATAM.
+
+## Desafío
+
+Este desafío te permitirá practicar  mis habilidades en las siguientes áreas:
+
+- **Desarrollo web**: Creación de una página web funcional con HTML, CSS y JavaScript.
+- **Manejo de cadenas**: Manipulación de texto mediante JavaScript.
+- **Interfaz de usuario**: Diseño de una interfaz sencilla y fácil de usar.
 
 ## Funcionalidades
 
-- El encriptador permite al usuario ingresar un texto en letras minúsculas.
-- El texto ingresado se encripta utilizando una tabla de equivalencias predefinida.
-- El texto encriptado se muestra al usuario.
-- El usuario puede copiar el texto encriptado al portapapeles.
+- Permite al usuario ingresar un texto en letras minúsculas.
+- Encripta el texto utilizando una tabla de equivalencias predefinida.
+- Muestra el texto encriptado al usuario.
+- Permite copiar el texto encriptado al portapapeles.
 
 ## Tecnologías Utilizadas
 
@@ -17,11 +25,29 @@ Este proyecto consiste en un encriptador de texto simple desarrollado utilizando
 - **CSS**: Para el estilo y la presentación de la interfaz de usuario.
 - **JavaScript**: Para la lógica de encriptación y la interacción con el usuario.
 
-## Desafío
+## Capturas de Pantalla
 
-Este desafío te permitirá practicar tus habilidades en las siguientes áreas:
+### Interfaz Principal
 
-- **Desarrollo web**: Creación de una página web funcional con HTML, CSS y JavaScript.
-- **Manejo de cadenas**: Manipulación de texto mediante JavaScript.
-- **Interfaz de usuario**: Diseño de una interfaz sencilla y fácil de usar.
+![Interfaz Principal](asset/encriptador.png)
 
+### Texto Encriptado
+
+![Texto Encriptado](asset/encriptador2.png)
+
+
+
+
+## Reflexiones Personales
+
+Este proyecto ha sido una experiencia enriquecedora y un gran desafío. Aquí algunas de las cosas que aprendí:
+
+- **Aplicación Práctica de Conceptos:** La implementación de la lógica de encriptación me permitió aplicar de manera práctica los conocimientos adquiridos en JavaScript, especialmente en la manipulación de cadenas y la interacción con el DOM.
+
+- **Desarrollo de Interfaz de Usuario:** Diseñar y estilizar la interfaz me ayudó a mejorar mis habilidades en CSS, y a comprender mejor cómo crear una experiencia de usuario intuitiva y agradable.
+
+- **Resolución de Problemas:** Enfrentar y resolver problemas de codificación me permitió desarrollar habilidades para depurar y optimizar el código.
+
+Este reto no solo me ha permitido consolidar conocimientos técnicos, sino que también me ha dado una visión más clara de cómo integrar diferentes tecnologías para construir una aplicación funcional.
+
+¡Espero que disfrutes explorando este proyecto tanto como yo disfruté creándolo!
