@@ -182,7 +182,6 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 10%;
   font-size: 1.5rem;
   background-color: rgb(81, 55, 97, 1);
 }
@@ -209,6 +208,7 @@ header {
   background-color: #14021e;
 }
 
+/* Media Queries */
 @media (max-width: 600px) {
   .header-info,
   .footer {
@@ -245,6 +245,7 @@ header {
     overflow-y: auto;
     height: 100%;
   }
+
   #text-ingresado::placeholder {
     font-size: 1rem;
   }
@@ -254,20 +255,224 @@ header {
     height: 45vh;
     font-size: 0.8rem;
   }
+
   .panel-parrafo {
     width: 95%;
     font-size: 0.78rem;
   }
+
   .btn {
     font-size: 0.8rem;
     width: 100px;
+  }
+
+  .footer-info i {
+    width: 30px;
+    height: 30px;
+  }
+
+  .footer-info-text {
+    font-size: 0.1rem;
+    margin-left: 10px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 720px) {
+  .contenido {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .contenido-encriptador,
+  .texto-resultado,
+  .panel-imagen {
+    width: 90%;
+    height: 40vh;
+    font-size: 0.9rem;
+  }
+
+  .panel-parrafo {
+    width: 90%;
+    font-size: 0.9rem;
+  }
+
+  #text-ingresado,
+  #resultado {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  #text-ingresado::placeholder {
+    font-size: 1rem;
+  }
+}
+/* Media Queries */
+
+/* Pantallas menores a 600px */
+@media (max-width: 600px) {
+  .header-info,
+  .footer {
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.5rem;
+    padding: 10px;
+  }
+
+  .contenido {
+    height: 100vh;
+    width: 100vw;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: center;
+  }
+
+  .contenido-encriptador,
+  .texto-resultado {
+    width: 95%;
+    height: 50vh;
+    font-size: 0.8rem;
+  }
+
+  #text-ingresado,
+  #resultado {
+    font-size: 1rem;
+    padding: 5px;
+  }
+
+  #resultado {
+    overflow-y: auto;
+    height: 100%;
+  }
+
+  #text-ingresado::placeholder {
+    font-size: 1rem;
+  }
+
+  .panel-imagen {
+    width: 95%;
+    height: 45vh;
+    font-size: 0.8rem;
+  }
+
+  .panel-parrafo {
+    width: 95%;
+    font-size: 0.78rem;
+  }
+
+  .btn {
+    font-size: 0.8rem;
+    width: 100px;
+  }
+
+  .footer{
+    padding-left: 30px;
+    gap: 30px;
+   
   }
   .footer-info i {
     width: 30px;
     height: 30px;
   }
+
   .footer-info-text {
+    font-size: 0.9rem;
+   
+  }
+}
+
+/* Pantallas entre 601px y 720px */
+@media (min-width: 601px) and (max-width: 720px) {
+  .contenido {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .contenido-encriptador,
+  .texto-resultado,
+  .panel-imagen {
+    width: 90%;
+    height: 40vh;
+    font-size: 0.9rem;
+  }
+
+  .panel-parrafo {
+    width: 90%;
+    font-size: 0.9rem;
+  }
+
+  #text-ingresado,
+  #resultado {
     font-size: 1rem;
-    margin-left: 10px;
+    padding: 10px;
+  }
+
+  #text-ingresado::placeholder {
+    font-size: 1rem;
+  }
+}
+/* Tabletas y dispositivos medianos (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .contenido {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .contenido-encriptador,
+  .texto-resultado,
+  .panel-imagen {
+    width: 80%;
+    height: 45%;
+    margin-bottom: 20px;
+  }
+
+  .avatar {
+    width: auto;
+    height: 50%;
+  }
+
+  .footer-info {
+    gap: 30px;
+  }
+
+  .footer {
+    font-size: 1.5rem;
+    gap: 50px;
+  }
+}
+
+/* Pantallas mayores a 1024px */
+@media (min-width: 1024px) {
+  .contenido-encriptador,
+  .texto-resultado,
+  .panel-imagen {
+    width: 90%;
+    height: 50vh;
+    font-size: 0.9rem;
+  }
+
+  .panel-parrafo {
+    width: 90%;
+    max-height: 20vh;
+    font-size: 0.9rem;
+  }
+
+  .avatar {
+    height: 60%;
+  }
+
+  #text-ingresado,
+  #resultado {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  #text-ingresado::placeholder {
+    font-size: 1rem;
+  }
+
+  .footer-info-text {
+    font-size: 1.5rem;
+    margin-left: 30px;
   }
 }
