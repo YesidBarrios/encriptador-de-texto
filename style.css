@@ -30,7 +30,7 @@ header {
 }
 
 .link__logoAlura,
-.footer-titulo {
+.header-titulo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -165,6 +165,7 @@ header {
 
 .avatar {
   width: 60%;
+  height: 60%;
 }
 
 .panel-parrafo,
@@ -205,218 +206,49 @@ header {
 
 .footer-info i:hover {
   transform: scale(1.2);
-  background-color: #14021e;
+  background-color: #191819;
 }
 
-/* Media Queries */
-@media (max-width: 600px) {
-  .header-info,
-  .footer {
-    display: flex;
-    justify-content: space-around;
-    font-size: 0.5rem;
-    padding: 10px;
-  }
+/* Media Querys*/
 
+@media (min-width: 720px) and (max-width: 1023px) {
   .contenido {
-    height: 100vh;
-    width: 100vw;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    justify-content: center;
-  }
-
-  .contenido-encriptador,
-  .texto-resultado {
-    width: 95%;
-    height: 50vh;
-    font-size: 0.8rem;
-  }
-
-  #text-ingresado,
-  #resultado {
-    font-size: 1rem;
-    padding: 5px;
-  }
-
-  #resultado {
-    overflow-y: auto;
-    height: 100%;
-  }
-
-  #text-ingresado::placeholder {
-    font-size: 1rem;
-  }
-
-  .panel-imagen {
-    width: 95%;
-    height: 45vh;
-    font-size: 0.8rem;
-  }
-
-  .panel-parrafo {
-    width: 95%;
-    font-size: 0.78rem;
-  }
-
-  .btn {
-    font-size: 0.8rem;
-    width: 100px;
-  }
-
-  .footer-info i {
-    width: 30px;
-    height: 30px;
-  }
-
-  .footer-info-text {
-    font-size: 0.1rem;
-    margin-left: 10px;
-  }
-}
-
-@media (min-width: 601px) and (max-width: 720px) {
-  .contenido {
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  .contenido-encriptador,
-  .texto-resultado,
-  .panel-imagen {
-    width: 90%;
-    height: 40vh;
-    font-size: 0.9rem;
-  }
-
-  .panel-parrafo {
-    width: 90%;
-    font-size: 0.9rem;
-  }
-
-  #text-ingresado,
-  #resultado {
-    font-size: 1rem;
-    padding: 10px;
-  }
-
-  #text-ingresado::placeholder {
-    font-size: 1rem;
-  }
-}
-/* Media Queries */
-
-/* Pantallas menores a 600px */
-@media (max-width: 600px) {
-  .header-info,
-  .footer {
-    display: flex;
-    justify-content: space-around;
-    font-size: 0.5rem;
-    padding: 10px;
-  }
-
-  .contenido {
-    height: 100vh;
-    width: 100vw;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    justify-content: center;
-  }
-
-  .contenido-encriptador,
-  .texto-resultado {
-    width: 95%;
-    height: 50vh;
-    font-size: 0.8rem;
-  }
-
-  #text-ingresado,
-  #resultado {
-    font-size: 1rem;
-    padding: 5px;
-  }
-
-  #resultado {
-    overflow-y: auto;
-    height: 100%;
-  }
-
-  #text-ingresado::placeholder {
-    font-size: 1rem;
-  }
-
-  .panel-imagen {
-    width: 95%;
-    height: 45vh;
-    font-size: 0.8rem;
-  }
-
-  .panel-parrafo {
-    width: 95%;
-    font-size: 0.78rem;
-  }
-
-  .btn {
-    font-size: 0.8rem;
-    width: 100px;
-  }
-
-  .footer{
-    padding-left: 30px;
+    flex-direction: row;
     gap: 30px;
-   
-  }
-  .footer-info i {
-    width: 30px;
-    height: 30px;
-  }
-
-  .footer-info-text {
-    font-size: 0.9rem;
-   
-  }
-}
-
-/* Pantallas entre 601px y 720px */
-@media (min-width: 601px) and (max-width: 720px) {
-  .contenido {
-    width: 100vw;
   }
 
   .contenido-encriptador,
   .texto-resultado,
   .panel-imagen {
-    width: 90%;
-    height: 40vh;
+    width: 60%;
+    height: 50%;
+    margin-bottom: 0;
+  }
+  #texto-ingresado::placeholder {
+    font-size: 0.8rem;
+  }
+  .mq-h-text,
+  .mq-p-text {
     font-size: 0.9rem;
   }
-
-  .panel-parrafo {
-    width: 90%;
-    font-size: 0.9rem;
+  .footer-info {
+    width: 30%;
+    margin-right: 5px;
   }
-
-  #text-ingresado,
-  #resultado {
+  .footer-info i {
     font-size: 1rem;
-    padding: 10px;
-  }
-
-  #text-ingresado::placeholder {
-    font-size: 1rem;
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
   }
 }
-/* Tabletas y dispositivos medianos (768px - 1023px) */
-@media (min-width: 768px) and (max-width: 1023px) {
+
+@media (min-width: 601px) and (max-width: 719px) {
   .contenido {
     flex-direction: column;
     gap: 20px;
   }
+
   .contenido-encriptador,
   .texto-resultado,
   .panel-imagen {
@@ -424,54 +256,49 @@ header {
     height: 45%;
     margin-bottom: 20px;
   }
-
-  .avatar {
-    width: auto;
-    height: 50%;
+  .mq-h-text, .mq-p-text{
+    font-size: 0.9rem;
   }
-
   .footer-info {
-    gap: 30px;
+    width: 30%;
+    margin-right: 5px;
   }
-
-  .footer {
-    font-size: 1.5rem;
-    gap: 50px;
+  .footer-info i {
+    font-size: 1rem;
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
   }
 }
 
-/* Pantallas menores a 1200px */
-@media (max-width: 1200px) {
+@media (min-width: 300px) and (max-width: 600px) {
+  .contenido {
+    flex-direction: column;
+    padding: 20px;
+  }
   .contenido-encriptador,
   .texto-resultado,
   .panel-imagen {
-    width: 90%;
+    width: 95%;
     height: 50vh;
+    font-size: 0.8rem;
+  }
+  .logo-Alura {
+    width: 20px;
+    height: 20px;
+  }
+  .mq-h-text,
+  .mq-p-text {
     font-size: 0.9rem;
   }
-
-  .panel-parrafo {
-    width: 90%;
-    max-height: 20vh;
-    font-size: 0.9rem;
+  .footer-info {
+    width: 30%;
+    margin-right: 5px;
   }
-
-  .avatar {
-    height: 60%;
-  }
-
-  #text-ingresado,
-  #resultado {
+  .footer-info i {
     font-size: 1rem;
-    padding: 10px;
-  }
-
-  #text-ingresado::placeholder {
-    font-size: 1rem;
-  }
-
-  .footer-info-text {
-    font-size: 1.5rem;
-    margin-left: 30px;
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
   }
 }
