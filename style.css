@@ -16,55 +16,57 @@ body {
 
 /* Header Styles */
 header {
-  height: 10vh;
+  height: 10%;
   width: 100vw;
   display: flex;
-  justify-content: center;
   align-items: center;
   background-color: rgb(81, 55, 97, 1);
+  padding: 0 20px;
 }
 
 .header-info {
   display: flex;
-  justify-content: space-around;
+  align-items: center;
+  width: 100%;
 }
 
-.link__logoAlura,
+.logo-alura {
+  height: 80%;
+}
+
 .header-titulo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 0 auto;
 }
 
 /* Main Content Styles */
 .contenido {
   width: 100vw;
   height: 80vh;
-  padding: 2%;
   background-color: rgb(50, 6, 76, 0.85);
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10%;
+  gap: 50px;
 }
 
 .contenido-encriptador {
   background-color: rgb(81, 55, 97, 0.2);
   border-radius: 30px;
-  height: 100%;
-  width: 40%;
+  height: 90%;
+  width: 50%;
   display: flex;
   justify-content: center;
   flex-direction: column;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
   border: none;
   font-size: 1.2rem;
+  gap: 10px;
 }
 
 /* Textarea Styles */
 #text-ingresado {
   resize: none;
-  height: 80%;
+  height: 70%;
   width: 95%;
   margin: 2.5%;
   outline: none;
@@ -74,7 +76,7 @@ header {
   font-family: "Roboto Mono", Arial, Helvetica, sans-serif;
   text-align: center;
   align-content: center;
-  overflow: hidden;
+  overflow-y: auto;
   font-size: 1.5rem;
 }
 
@@ -85,7 +87,7 @@ header {
 }
 
 .advertencia {
-  margin: 2%;
+  margin-left: 15px;
   display: flex;
   gap: 10px;
   align-items: baseline;
@@ -95,10 +97,9 @@ header {
 .btn {
   border: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
-  width: 7rem;
-  height: 2.5rem;
+  width: 100px;
   padding: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   border-radius: 15px;
   background-color: #ffffff;
   color: #32064c;
@@ -115,7 +116,7 @@ header {
 .btn-accion {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 15px;
 }
 
 .texto-resultado {
@@ -123,7 +124,7 @@ header {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
   border: none;
   border-radius: 30px;
-  height: 100%;
+  height: 90%;
   width: 30%;
   display: flex;
   align-items: center;
@@ -144,34 +145,30 @@ header {
   font-family: "Roboto Mono", Arial, Helvetica, sans-serif;
   text-align: center;
   align-content: center;
-  overflow: hidden;
-  font-size: 1.5rem;
+  overflow-y: auto;
+  font-size: 1.25rem;
 }
 
 .panel-imagen {
-  background-color: hsla(277, 28%, 30%, 0.6);
+  background-color: rgba(81, 55, 98, 0.6);
   border-radius: 30px;
-  height: 100%;
-  width: 30%;
+  height: 90%;
+  width: 20%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  align-content: center;
-  gap: 1%;
-  font-size: 1rem;
+  text-align: center;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
 }
 
 .avatar {
   width: 60%;
-  height: 60%;
 }
-
 .panel-parrafo,
 .panel-mensaje {
-  margin: 2%;
-  border-radius: 10px;
+  margin: 5px;
+  border-radius: 15px;
   padding: 2px;
   align-content: center;
 }
@@ -183,12 +180,12 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  gap: 50px;
   background-color: rgb(81, 55, 97, 1);
 }
 
 .footer-info {
-  width: 10%;
   display: flex;
   justify-content: center;
   gap: 15px;
@@ -200,105 +197,186 @@ header {
   align-content: center;
   text-align: center;
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 25px;
   transition: all 0.3s ease;
 }
 
 .footer-info i:hover {
   transform: scale(1.2);
-  background-color: #191819;
+  background-color: #14021e;
 }
 
-/* Media Querys*/
-
-@media (min-width: 720px) and (max-width: 1023px) {
-  .contenido {
-    flex-direction: row;
-    gap: 30px;
-  }
-
-  .contenido-encriptador,
-  .texto-resultado,
-  .panel-imagen {
+/* Media Queries */
+@media (min-width: 900px) and (max-width: 1200px) {
+  .contenido-encriptador {
     width: 60%;
-    height: 50%;
-    margin-bottom: 0;
-  }
-  #texto-ingresado::placeholder {
-    font-size: 0.8rem;
-  }
-  .mq-h-text,
-  .mq-p-text {
     font-size: 0.9rem;
   }
-  .footer-info {
-    width: 30%;
-    margin-right: 5px;
+ .texto-resultado{
+  width: 30%;
+
   }
-  .footer-info i {
+  .panel-imagen {
+    width: 20%;
+  }
+
+  #text-ingresado::placeholder {
     font-size: 1rem;
-    width: 30px;
-    height: 30px;
-    border-radius: 20px;
+  }
+  .mq-h-text {
+    font-size: 1.3rem;
   }
 }
 
-@media (min-width: 601px) and (max-width: 719px) {
+@media (min-width: 700px) and (max-width: 899px) {
   .contenido {
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
+    padding: 20px;
+  }
+  .contenido-encriptador {
+    width: 80%;
+    height: 70%;
+  }
+  .texto-resultado {
+    height: 50%;
+    width: 80%;
+  }
+  .panel-imagen {
+    height: 30%;
+    width: 80%;
+  }
+  .mq-h-text {
+    font-size: 1.2rem;
+  }
+  .mq-p-text {
+    font-size: 0.8rem;
+  }
+  .logo-alura {
+    width: 80%;
+  }
+  .avatar {
+    display: none;
   }
 
-  .contenido-encriptador,
-  .texto-resultado,
-  .panel-imagen {
-    width: 80%;
-    height: 45%;
-    margin-bottom: 20px;
+  #text-ingresado,
+  #resultado {
+    font-size: 1rem;
+    padding: 10px;
   }
-  .mq-h-text, .mq-p-text{
-    font-size: 0.9rem;
-  }
-  .footer-info {
-    width: 30%;
-    margin-right: 5px;
+
+  #text-ingresado::placeholder {
+    font-size: 0.8rem;
   }
   .footer-info i {
-    font-size: 1rem;
     width: 30px;
     height: 30px;
-    border-radius: 20px;
   }
 }
 
-@media (min-width: 300px) and (max-width: 600px) {
+@media (min-width: 500px) and (max-width: 699px) {
+  .contenido {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .contenido-encriptador,
+  .texto-resultado {
+    height: 70%;
+    width: 100%;
+    font-size: 0.9rem;
+  }
+  .panel-imagen {
+    height: 20%;
+    width: 100%;
+    gap: 0;
+  }
+
+  .logo-alura {
+    width: 80%;
+  }
+
+  .mq-h-text {
+    font-size: 1rem;
+  }
+  .mq-p-text {
+    font-size: 0.7rem;
+  }
+
+  .avatar {
+    display: none;
+  }
+
+  #text-ingresado,
+  #resultado {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  #text-ingresado::placeholder {
+    font-size: 0.7rem;
+  }
+  .footer-info i {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (min-width: 100px) and (max-width: 499px) {
   .contenido {
     flex-direction: column;
     padding: 20px;
+    gap: 15px;
   }
+  .logo-alura {
+    width: 80%;
+  }
+
   .contenido-encriptador,
-  .texto-resultado,
-  .panel-imagen {
-    width: 95%;
-    height: 50vh;
-    font-size: 0.8rem;
+  .texto-resultado{
+    width: 100%;
   }
-  .logo-Alura {
+  
+  .panel-imagen {
+    width: 100%;
+    height: 20%;
+  }
+
+  .mq-h-text {
+    font-size: 0.7rem;
+  }
+  .mq-p-text {
+    font-size: 0.5rem;
+  }
+
+  .avatar {
+    display: none;
+  }
+
+  #text-ingresado,
+  #resultado {
+    font-size: 0.7rem;
+    padding: 10px;
+  }
+.btn{
+  width: 75px;
+  font-size: 0.65rem;
+}
+  #text-ingresado::placeholder {
+    font-size: 0.5rem;
+  }
+  .footer-info i {
+    font-size: 0.7rem;
     width: 20px;
     height: 20px;
   }
-  .mq-h-text,
-  .mq-p-text {
-    font-size: 0.9rem;
-  }
-  .footer-info {
-    width: 30%;
-    margin-right: 5px;
-  }
-  .footer-info i {
-    font-size: 1rem;
-    width: 30px;
-    height: 30px;
-    border-radius: 20px;
+}
+@media(max-width: 300px){
+  .btn-accion{
+    flex-direction: column;
+    gap: 0;
+    justify-content: center;
+    align-items: center;
   }
 }

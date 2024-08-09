@@ -12,7 +12,6 @@ function mostrarMensaje(mensaje, detalle, color, fondo) {
   asigTextElemen(".panel-parrafo", detalle, color, fondo);
 }
 
-// Función para validar la entrada del usuario
 function validarEntrada(texto) {
   // Verifica si el texto está vacío
   if (texto === "") {
@@ -28,9 +27,6 @@ function validarEntrada(texto) {
     // Si el texto no está vacío, la validación continúa
   }
 
-
-
-  // Verifica si el texto contiene solo minúsculas y espacios
   if (!/^[a-z\s]+$/.test(texto)) {
     // Si el texto contiene caracteres que no sean letras minúsculas o espacios (la condición se cumple), se muestra un mensaje de advertencia
     mostrarMensaje(
@@ -39,15 +35,9 @@ function validarEntrada(texto) {
       "#990000", 
       "#ad9bb7" 
     );
-    // Retorna false porque la entrada no es válida si contiene caracteres no permitidos
     return false;
-    // Si el texto contiene solo minúsculas y espacios, la validación continúa
   }
 
-
-
-
-  // Verifica si el texto contiene al menos una vocal
   if (!/[aeiou]/.test(texto)) {
     // Si el texto no contiene ninguna vocal (la condición se cumple), se muestra un mensaje de advertencia
     mostrarMensaje(
@@ -56,11 +46,8 @@ function validarEntrada(texto) {
       "#990000", 
       "#ad9bb7" 
     );
-    // Retorna false porque la entrada no es válida si no contiene al menos una vocal
     return false;
-    // Si el texto contiene al menos una vocal, la validación ha sido exitosa
   }
-
   return true;
   // Si el texto pasa todas las validaciones anteriores, retorna true
 }
@@ -95,9 +82,7 @@ function encriptarTexto() {
 function desencriptarTexto() {
   // Resetea la interfaz antes de realizar cualquier acción
   resetearInterfaz();
-
   let palabraIngresada = document.getElementById("text-ingresado").value;
-
   // Llama a la función validarEntrada para verificar si el texto es válido
   if (!validarEntrada(palabraIngresada)) {
     // Si validarEntrada retorna false, se detiene la ejecución de la función desencriptarTexto
@@ -110,8 +95,8 @@ function desencriptarTexto() {
     mostrarMensaje(
       "¡Atención!",
       "Esta palabra no necesita ser desencriptada",
-      "#990000", // Color del texto del mensaje
-      "#ad9bb7" // Color de fondo del mensaje
+      "#990000",
+      "#ad9bb7"
     );
     // Detiene la ejecución de la función desencriptarTexto
     return;
@@ -127,11 +112,8 @@ function desencriptarTexto() {
 
   // Asigna el texto desencriptado al campo de resultado
   document.getElementById("resultado").value = palabraDesencriptada;
-
-
   mostrarResultado();
 }
-
 
 function copiarTexto() {
   let palabraCopiada = document.getElementById("resultado").value;
@@ -155,14 +137,13 @@ function copiarTexto() {
 // Función para resetear el estado de la interfaz
 function resetearInterfaz() {
   ocultarResultado();
-  mostrarMensaje("", "", "", ""); // Limpia los mensajes
+  mostrarMensaje("", "", "", ""); 
 }
 
 // Función para limpiar los campos de texto y restablecer la interfaz
 function limpiar() {
   document.querySelector("#text-ingresado").value = "";
   document.querySelector("#resultado").value = "";
-
   ocultarResultado();
 }
 
