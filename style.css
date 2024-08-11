@@ -309,4 +309,7 @@ header {
     gap: 1px;
     align-items: center;
   }
+  .footer-info{
+    margin-left: 20px;
+  }
 }
