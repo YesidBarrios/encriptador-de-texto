@@ -44,18 +44,18 @@ header {
 }
 
 .logo-alura {
-  height: 40px; 
+  height: 40px;
 }
 
 .header-titulo {
   margin: 0 auto;
 }
-#selector-tema{
-background-color: var(--color-boton);
-padding: 5px;
-border-radius: 10px;
-color: var(--color-fondo-entrada);
-outline: none;
+#selector-tema {
+  background-color: var(--color-boton);
+  padding: 5px;
+  border-radius: 10px;
+  color: var(--color-fondo-entrada);
+  outline: none;
 }
 
 /* Estilos del contenido principal */
@@ -230,7 +230,7 @@ outline: none;
   border-radius: 25px;
   transition: all 0.3s ease;
 }
-.footer-info a{
+.footer-info a {
   text-decoration: none;
 }
 
@@ -245,15 +245,15 @@ outline: none;
     padding: 30px;
     flex-direction: column;
   }
-  .contenido-encriptador, .texto-resultado {
+  .contenido-encriptador,
+  .texto-resultado {
     max-width: 90%;
   }
-  .panel-imagen{
+  .panel-imagen {
     min-height: 150px;
     min-width: 90%;
-    
   }
-  .avatar{
+  .avatar {
     display: none;
   }
   #text-ingresado,
@@ -308,6 +308,9 @@ outline: none;
     width: 20px;
     height: 20px;
   }
+  #selector-tema {
+    margin-left: 20px;
+  }
 }
 
 @media (max-width: 300px) {
@@ -316,7 +319,7 @@ outline: none;
     gap: 1px;
     align-items: center;
   }
-  .footer-info{
+  .footer-info {
     margin-left: 20px;
   }
 }
