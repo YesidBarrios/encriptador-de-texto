@@ -1,51 +1,58 @@
 // Función para asignar texto y color a un elemento HTML
-function asigTextElemen(elemento, texto, color, fondo) {
+function asigTextElemen(elemento, texto, color) {
   let elementosHtml = document.querySelector(elemento);
   elementosHtml.innerHTML = texto;
   elementosHtml.style.color = color;
-  elementosHtml.style.backgroundColor = fondo;
 }
 
 // Función para mostrar mensajes en el panel de mensajes
-function mostrarMensaje(mensaje, detalle, color, fondo) {
-  asigTextElemen(".panel-mensaje", mensaje, color, fondo);
-  asigTextElemen(".panel-parrafo", detalle, color, fondo);
+function mostrarMensaje(mensaje, detalle, color) {
+  asigTextElemen(".panel-mensaje", mensaje, color);
+  asigTextElemen(".panel-parrafo", detalle, color);
+}
+
+//funcionpara sacudir panel-imagen si hay un error
+function shakePanel() {
+  const panelImagen = document.querySelector('.panel-imagen');
+  panelImagen.classList.add('shake');
+  // Eliminar la clase después de la animación para que se pueda reutilizar
+  setTimeout(() => {
+    panelImagen.classList.remove('shake');
+  }, 300);
 }
 
 function validarEntrada(texto) {
   // Verifica si el texto está vacío
   if (texto === "") {
-    // Si el texto está vacío (la condición se cumple), se muestra un mensaje de advertencia
     mostrarMensaje(
       "¡Atención!",
       "Verifique que su entrada no esté vacía.",
-      "#990000", 
-      "#ad9bb7" 
+      "#FF4040", 
     );
+    shakePanel()
     // Retorna false porque la entrada no es válida si está vacía
     return false;
     // Si el texto no está vacío, la validación continúa
   }
 
   if (!/^[a-z\s]+$/.test(texto)) {
-    // Si el texto contiene caracteres que no sean letras minúsculas o espacios (la condición se cumple), se muestra un mensaje de advertencia
     mostrarMensaje(
       "¡Atención!",
       "El texto debe contener solo minúsculas y espacios.",
-      "#990000", 
-      "#ad9bb7" 
+     "#FF4040", 
+  
     );
+    shakePanel()
     return false;
   }
 
   if (!/[aeiou]/.test(texto)) {
-    // Si el texto no contiene ninguna vocal (la condición se cumple), se muestra un mensaje de advertencia
     mostrarMensaje(
       "¡Atención!",
       "La texto debe contener al menos una vocal.",
-      "#990000", 
-      "#ad9bb7" 
+      "#FF4040" 
     );
+    shakePanel()
     return false;
   }
   return true;
@@ -74,16 +81,12 @@ function encriptarTexto() {
     .replace(/u/g, "ufat");
 
   document.getElementById("resultado").value = palabraEncriptada;
-
   mostrarResultado();
 }
 
-
 function desencriptarTexto() {
-  // Resetea la interfaz antes de realizar cualquier acción
   resetearInterfaz();
   let palabraIngresada = document.getElementById("text-ingresado").value;
-  // Llama a la función validarEntrada para verificar si el texto es válido
   if (!validarEntrada(palabraIngresada)) {
     // Si validarEntrada retorna false, se detiene la ejecución de la función desencriptarTexto
     return;
@@ -91,7 +94,6 @@ function desencriptarTexto() {
 
   // Verifica si el texto necesita ser desencriptado
   if (!/(enter|imes|ai|ober|ufat)/.test(palabraIngresada)) {
-    // Si el texto no contiene códigos encriptados, muestra un mensaje de advertencia
     mostrarMensaje(
       "¡Atención!",
       "Esta palabra no necesita ser desencriptada",
@@ -110,7 +112,6 @@ function desencriptarTexto() {
     .replace(/ober/g, "o")
     .replace(/ufat/g, "u");
 
-  // Asigna el texto desencriptado al campo de resultado
   document.getElementById("resultado").value = palabraDesencriptada;
   mostrarResultado();
 }
@@ -140,14 +141,14 @@ function resetearInterfaz() {
   mostrarMensaje("", "", "", ""); 
 }
 
-// Función para limpiar los campos de texto y restablecer la interfaz
+// Función para limpiar los campos de textarea
 function limpiar() {
   document.querySelector("#text-ingresado").value = "";
   document.querySelector("#resultado").value = "";
   ocultarResultado();
 }
 
-// Funciones para mostrar y ocultar el resultado
+
 function mostrarResultado() {
   document.querySelector(".panel-imagen").style.display = "none";
   document.querySelector(".texto-resultado").style.display = "flex";
@@ -167,7 +168,7 @@ document
 
 document.getElementById("text-ingresado").addEventListener("blur", function () {
   if (this.value === "") {
-    this.placeholder = "Escribe Aqui"; // Restaura el placeholder si está vacío, vuelve el mensaje
+    this.placeholder = "Escribe Aqui"; 
   }
 });
 
@@ -179,6 +180,6 @@ function cambiarTema() {
   if (temaSeleccionado) {
       enlaceTema.href = `css/${temaSeleccionado}`;
   } else {
-      enlaceTema.href = ''; // Volver al estilo por defecto si se elige sin tema
+      enlaceTema.href = ''; 
   }
 }
