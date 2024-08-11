@@ -55,11 +55,11 @@ background-color: var(--color-azul-oscuro);
 }
 .btn-accion > .btn:nth-child(2) {
     background-color: var(--color-blanco-gris);
-    color: var(--color-acento); /* rojo */
+    color: var(--color-acento); 
   }
   .btn-accion > .btn:nth-child(2):hover {
     background-color: var(--color-acento);
-    color: var(--color-blanco); /* rojo */
+    color: var(--color-blanco); 
   }
 .mq-p-text {
   color: var(--color-azul-oscuro);
