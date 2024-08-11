@@ -25,17 +25,31 @@ Este desafío te permitirá practicar  mis habilidades en las siguientes áreas:
 - **CSS**: Para el estilo y la presentación de la interfaz de usuario.
 - **JavaScript**: Para la lógica de encriptación y la interacción con el usuario.
 
-## Capturas de Pantalla
+## Capturas de Pantalla Interfaz Diferentes Temas
 
+### Tema Default
 ### Interfaz Principal
-
-![Interfaz Principal](asset/encriptador.png)
-
+![Interfaz Principal](asset/interfaz-theme-defaul.png)
 ### Texto Encriptado
+![Texto Encriptado](asset/encriptar-theme-defaul.png)
 
-![Texto Encriptado](asset/encriptador2.png)
+### Tema Claro
+### Interfaz Principal
+![Interfaz Principal](asset/interfaz-theme-white.png)
+### Texto Encriptado
+![Texto Encriptado](asset/encriptar-theme-white.png)
 
+### Tema Oscuro
+### Interfaz Principal
+![Interfaz Principal](asset/interfaz-theme-dark.png)
+### Texto Encriptado
+![Texto Encriptado](asset/encriptar-theme-dark.png)
 
+### Tema Violeta
+### Interfaz Principal
+![Interfaz Principal](asset/interfaz-theme-violet.png)
+### Texto Encriptado
+![Texto Encriptado](asset/encriptar-theme-violet.png)
 
 
 ## Reflexiones Personales
