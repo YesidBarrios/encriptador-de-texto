@@ -167,6 +167,18 @@ document
 
 document.getElementById("text-ingresado").addEventListener("blur", function () {
   if (this.value === "") {
-    this.placeholder = "Ingresa el texto a encriptar o desencriptar"; // Restaura el placeholder si está vacío, vuelve el mensaje
+    this.placeholder = "Escribe Aqui"; // Restaura el placeholder si está vacío, vuelve el mensaje
   }
 });
+
+
+function cambiarTema() {
+  const temaSeleccionado = document.getElementById('selector-tema').value;
+  const enlaceTema = document.getElementById('tema-css');
+  
+  if (temaSeleccionado) {
+      enlaceTema.href = `css/${temaSeleccionado}`;
+  } else {
+      enlaceTema.href = ''; // Volver al estilo por defecto si se elige sin tema
+  }
+}

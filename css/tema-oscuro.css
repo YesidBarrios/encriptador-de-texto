@@ -1,0 +1,54 @@
+/* Tema Oscuro */
+
+:root {
+  --fondo: #000000; /* fondo negro */
+  --texto-primario: #ffffff; /* texto blanco */
+  --texto-secundario: #666666; /* texto gris claro */
+  --acento: #333333; /* gris oscuro */
+  --acento-transparente: rgba(51, 51, 51, 0.2);
+  --acento-semi-transparente: rgba(51, 51, 51, 0.6);
+  --fondo-entrada: #444444; /* fondo de entrada gris oscuro */
+  --boton: #555555; /* botón gris oscuro */
+  --boton-hover: #777777; /* botón hover gris claro */
+  --sombra: rgba(0, 0, 0, 0.7); /* sombra oscura */
+}
+
+header,
+footer {
+  background-color: var(--acento) !important;
+}
+
+.contenido {
+  background-color: var(--fondo);
+}
+textarea{
+background-color: var(--boton-hover) !important;
+color: var(--texto-primario) !important;
+}
+textarea::placeholder{
+  color: var(--texto-primario) !important;
+}
+
+.contenido-encriptador,
+.texto-resultado,
+.panel-imagen {
+  background-color: var(--acento-semi-transparente);
+}
+
+.btn {
+  background-color: var(--texto-primario);
+  color: var(--fondo);
+}
+
+.btn:hover {
+  background-color: var(--boton-hover);
+  color: var(--texto-primario);
+}
+
+.footer-info i{
+  color: var(--fondo);
+}
+.footer-info i:hover{
+  background-color: var(--fondo);
+  color: var(--texto-primario);
+}

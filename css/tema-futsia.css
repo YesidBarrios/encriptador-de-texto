@@ -1,0 +1,67 @@
+
+:root {
+    --color-primary: #70176e;
+    --color-secondary: #9A0794;
+    --color-accent: #B814B2;
+    --color-highlight: #E4F132;
+    --color-background: #F5F7D4;
+    --color-dark-accent: #6A0B68; /* Nuevo color para hover */
+    --color-container: rgba(154, 7, 148, 0.3); /* Ajustado para mejor contraste */
+  }
+
+  body {
+    background-color: var(--color-accent);
+    color: var(--color-background);
+  }
+  .contenido{
+    background-color: var(--color-accent);
+    color: var(--color-background);
+  }
+  
+  header {
+    background-color: var(--color-dark-accent);
+    color: var(--color-texto);
+  }
+  
+  footer{
+    background-color: var(--color-dark-accent) !important;
+  }
+  
+  button, select {
+    background-color: var(--color-boton);
+    color: var(--color-texto);
+  }
+  
+
+  
+ 
+  
+  .contenido-encriptador,.panel-imagen, .texto-resultado {
+    background-color: var(--color-secondary);
+    color: var(--color-texto);
+  }
+  
+  textarea {
+    background-color: var(--color-background) !important;
+    color: var(--color-texto);
+  }
+
+  .advertencia {
+    color: var(--color-texto);
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+  }
+  
+ 
+ .header-info {
+    color: var(--color-texto);
+  }
+  
+  .footer-info i {
+    background-color: var(--color-background);
+    color: var(--color-primary);
+  }
+  .footer-info i:hover{
+    background-color: var(--color-accent);
+    color: var(--color-background);
+  }

@@ -1,0 +1,74 @@
+:root {
+  --color-fondo-blanco: rgba(255, 255, 255, 0.9);
+  --color-azul-oscuro: #0a3871;
+  --color-acento: #0a3871;
+  --color-texto: #000000;
+  --color-fondo-entrada: rgba(255, 255, 255, 0.8);
+  --color-boton-hover: #0056a0;
+  --color-sombra: rgba(0, 0, 0, 0.3);
+  --color-blanco: #fff;
+  --color-blanco-gris: #f2eeee;
+}
+
+body {
+  background-color: var(--color-fondo-blanco);
+  color: var(--color-azul-oscuro);
+}
+header,
+footer {
+  background-color: var(--color-blanco) !important;
+  color: var(--color-azul-oscuro);
+}
+#selector-tema{
+background-color: var(--color-azul-oscuro);
+}
+.contenido-encriptador,
+.panel-imagen,
+.texto-resultado {
+  background-color: var(--color-fondo-entrada);
+}
+
+.contenido {
+  background-color: var(--color-blanco-gris);
+  color: var(--color-acento);
+}
+ .advertencia{
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+ }
+
+#text-ingresado,
+#resultado {
+  color: var(--color-azul-oscuro);
+  border: none;
+}
+#text-ingresado::placeholder {
+  color: var(--color-acento);
+}
+.btn {
+  background-color: var(--color-acento);
+  color: var(--color-blanco);
+}
+.btn:hover{
+    background-color: var(--color-blanco-gris);
+    color: var(--color-acento);
+}
+.btn-accion > .btn:nth-child(2) {
+    background-color: var(--color-blanco-gris);
+    color: var(--color-acento); /* rojo */
+  }
+  .btn-accion > .btn:nth-child(2):hover {
+    background-color: var(--color-acento);
+    color: var(--color-blanco); /* rojo */
+  }
+.mq-p-text {
+  color: var(--color-azul-oscuro);
+}
+
+.footer-info i {
+  background-color: var(--color-azul-oscuro);
+  color: var(--color-blanco);
+}
+.footer-info i :hover{
+background-color: var(--color-acento);
+}

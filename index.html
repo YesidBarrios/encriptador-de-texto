@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="asset/icon.png" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link id="tema-css" rel="stylesheet" href="">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -29,13 +30,20 @@
           <img class="logo-alura" src="asset/LogoAlura.png" alt="Logo Alura" />
         </a>
         <h1 class="header-titulo mq-h-text">Encriptador de Texto</h1>
+        <select id="selector-tema" onchange="cambiarTema()">
+          <option value="" selected disabled>Seleccionar tema</option>
+          <option value="style.css" >defect</option>
+          <option value="tema-claro.css">Claro</option>
+          <option value="tema-oscuro.css">Oscuro</option>
+          <option value="tema-futsia.css">Violeta</option>
+      </select>
       </div>
     </header>
     <main class="contenido">
       <div class="contenido-encriptador">
         <textarea
           id="text-ingresado"
-          placeholder="Ingresa el texto a encriptar o desencriptar"
+          placeholder="Ecribe Aqui"
         ></textarea>
         <p class="advertencia mq-p-text">
           <i class="fas fa-exclamation-circle"></i>No ingrese mayúsculas,
