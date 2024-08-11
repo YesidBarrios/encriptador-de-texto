@@ -227,6 +227,7 @@ header {
   justify-content: center;
   align-items: center;
   background-color: var(--color-boton);
+  color: var(--color-texto-oscuro);
   border-radius: 25px;
   transition: all 0.3s ease;
 }
@@ -303,8 +304,9 @@ header {
     font-size: 1rem;
   }
   .btn {
-    width: 75px;
+    width: 100px;
     font-size: 0.65rem;
+    text-align: center;
   }
   .footer-info i {
     font-size: 0.7rem;
